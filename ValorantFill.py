@@ -1,7 +1,6 @@
 import glob
+#Constatnts
 path = "C:\\Users\\sionl\\AppData\\Local\\VALORANT\\Saved\\Config\\*\\Windows\\GameUserSettings.ini"
-files = glob.glob(path)
-
 RES_X = "1440"
 RES_Y = "1080"
 FullScreenMode = "2" #Windowed
@@ -22,6 +21,7 @@ desiredSettings = {
 "FullscreenMode=" : FullScreenMode,
 }
 
+files = glob.glob(path)
 for file in files:
     newLines = []
     with open(file) as readFile:
