@@ -2,23 +2,27 @@ import glob
 path = "C:\\Users\\sionl\\AppData\\Local\\VALORANT\\Saved\\Config\\*\\Windows\\GameUserSettings.ini"
 files = glob.glob(path)
 
+RES_X = "1440"
+RES_Y = "1080"
+FullScreenMode = "2" #Windowed
+
 desiredSettings = {
-"bShouldLetterbox=" : "False",
+"bShouldLetterbox=" : "False", #Removes Black bars
 "bLastConfirmedShouldLetterbox=" : "False",
-"ResolutionSizeX=" : "1440",
-"ResolutionSizeY=" : "1080",
-"LastUserConfirmedResolutionSizeX=" : "1440",
-"LastUserConfirmedResolutionSizeY=" : "1080",
-"LastConfirmedFullscreenMode=" : "2",
-"PreferredFullscreenMode=" : "2",
-"DesiredScreenWidth=" : "1440",
-"DesiredScreenHeight=" : "1080",
-"LastUserConfirmedDesiredScreenWidth=" : "1440",
-"LastUserConfirmedDesiredScreenHeight=" : "1080"
+"ResolutionSizeX=" : RES_X,
+"ResolutionSizeY=" : RES_Y,
+"LastUserConfirmedResolutionSizeX=" : RES_X,
+"LastUserConfirmedResolutionSizeY=" : RES_Y,
+"LastConfirmedFullscreenMode=" : FullScreenMode,
+"PreferredFullscreenMode=" : FullScreenMode,
+"DesiredScreenWidth=" : RES_X,
+"DesiredScreenHeight=" : RES_Y,
+"LastUserConfirmedDesiredScreenWidth=" : RES_X,
+"LastUserConfirmedDesiredScreenHeight=" : RES_Y,
+"FullscreenMode=" : FullScreenMode,
 }
 
 for file in files:
-    #print(file)
     newLines = []
     with open(file) as readFile:
         lines = readFile.readlines()
