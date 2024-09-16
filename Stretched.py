@@ -26,5 +26,5 @@ if __name__ == "__main__":
     if not pyuac.isUserAdmin():
         print("Re-launching as admin!")
         pyuac.runAsAdmin()
-    else:        
+    else:
         main()  # Already an admin here.
